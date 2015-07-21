@@ -1,0 +1,207 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" name="viewport"/>
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta charset="utf-8">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <title>{!POSITION_1}</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style2.css">
+      <link href="css/style_location_assets.css" rel="stylesheet">
+      <script src="js/jquery-1.8.1.min.js"></script> 
+      <script src="js/jquery-ui.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script src="js/jquery.ui.touch-punch.js"></script> 
+      <!--<script src="js/prefixfree.min.js"></script> -->
+      <script src="js/scripts.js"></script> 
+      <script type="text/javascript">
+         $(document).ready(function() {
+            // tubs onload
+            $('.ft-tubs-container').children('div').css('display','none');
+            $('.ft-tubs-container').children('div').eq($('.ft-tubs-nav .ft-tub.active').index()).css('display','block');
+            // tubs onclick
+            $('.ft-tub').click(function(){
+               if($(this).hasClass('active')){
+                  return false
+               }
+         
+               $('.ft-tub').removeClass('active');
+               $(this).addClass('active');
+         
+               $('.ft-tubs-container').children('div').css('display','none');
+               $('.ft-tubs-container').children('div').eq($('.ft-tubs-nav .ft-tub.active').index()).fadeIn(100) ;
+         
+               $('#header h1').css('display','block');
+               $('#header h2.alter').css('display','none');
+            });
+         
+            $('.ft-tub.income').click(function(){
+               $('#header h1').css('display','none');
+               $('#header h2.alter').css('display','block');
+            });
+            
+         });
+      </script>
+      <script src="js/script_general.js"></script> 
+      <script src="js/insurLife_assets.js"></script> 
+      <script type="text/javascript" src="../JSLibrary/js/app.js"></script> 
+   </head>
+   <body>
+      <article id="slide">
+         <header id="header">
+            <h1>Quote</h1>
+            <h2 class="alter">Results</h2>
+         </header>
+         <div id="main">
+         <div class="wrapper">
+         <div class="ft-tubs">
+            <div class="ft-tubs-nav">
+               <div class="ft-tub assets active">Assets</div>
+               <div class="ft-tub liabil">Liabilities</div>
+               <div class="ft-tub income">Income</div>
+            </div>
+            <!--       diagram         -->
+            <div class="diagram">
+               <div class="graph">
+                  <div class="gr-green"><span></span></div>
+                  <div class="gr-orange"><span></span></div>
+               </div>
+               <div class="diagram_legend"> 
+                  <span class="green">Assets</span> 
+                  <span class="orange">Liabilities</span> 
+               </div>
+            </div>
+            <!--        diagram        -->
+            <div class="ft-tubs-container">
+               <div class="Assets_box atwork">
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name"><span>Savings</span></div>
+                     <div class="slider-value" id="annual_income_val"></div>
+                     <div id="annual_income" class="sliderwidget"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name"><span>Investments</span></div>
+                     <div class="slider-value" id="cash_savings_val"></div>
+                     <div id="cash_savings" class="sliderwidget"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name"><span>Other assets</span></div>
+                     <div class="slider-value" id="longterm_savings_val"></div>
+                     <div id="longterm_savings" class="sliderwidget"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name sl-last"><span>Current amount of life<br />insurance</span></div>
+                     <div class="slider-value" id="other_assets_val"></div>
+                     <div id="other_assets" class="sliderwidget"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="total-summ">
+                     <span>Total assets</span>
+                     <div class="sum-box" id="resultone_div"></div>
+                  </div>
+                  <!--total-summ-->
+               </div>
+               <!-- Assets_box -->
+               <div class="Expenses_box">
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name monthly_payment"><span>Current outstanding mortgage</span></div>
+                     <div id="monthly_payment" class="sliderwidget"></div>
+                     <div class="slider-value" id="monthly_payment_val"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name loans"><span>Money required for education</span></div>
+                     <div id="loans" class="sliderwidget"></div>
+                     <div class="slider-value" id="loans_val"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name dependents"><span>Outstanding loans, other debt</span></div>
+                     <div id="dependents" class="sliderwidget"></div>
+                     <div class="slider-value" id="dependents_val"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name other_expenses"><span>Final expenses</span></div>
+                     <div id="other_expenses" class="sliderwidget"></div>
+                     <div class="slider-value" id="other_expenses_val"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name needs"><span>Other cash needs</span></div>
+                     <div id="needs" class="sliderwidget"></div>
+                     <div class="slider-value" id="needs_val"></div>
+                  </div>
+                  <!-- slider_row -->
+                  <div class="total-summ">
+                     <span>Total liabilities</span>
+                     <div class="sum-box" id="resulttwo_div"></div>
+                  </div>
+                  <!--total-summ-->
+               </div>
+               <!-- Expenses_box -->
+               <div class="income-box">
+                  <div class="slider_row">
+                     <p class="bax">$</p>
+                     <div class="slider-name desired"><span>Desired replacement income</span></div>
+                     <div class="slider-value" id="desired_val"></div>
+                     <div id="desired" class="sliderwidget"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="slider_row lst">
+                     <p>Yrs</p>
+                     <div class="slider-name replace"><span>Number of years to replace<br />income</span></div>
+                     <div class="slider-value" id="replace_val"></div>
+                     <div id="replace" class="sliderwidget"></div>
+                  </div>
+                  <!-- slider_row --> 
+                  <div class="total-summ">
+                     <div class="line"></div>
+                     <span>Additional life insurance needed</span>
+                     <div class="sum-box" id="result_div"></div>
+                  </div>
+                  <!--total-summ-->
+               </div>
+               <!-- income -->
+               <!--                -->
+               <input type="hidden" id="input-state" sobject="CTPHARMA__Activity__c" sfield="Region_3__c" value="" class="feedback"> 
+               <input type="hidden" id="input-annual" sobject="CTPHARMA__Activity__c" sfield="Revenue__c" value="" class="feedback"> 
+               <input type="hidden" id="input-cash" sobject="CTPHARMA__Activity__c" sfield="Savings__c" value="" class="feedback"> 
+               <input type="hidden" id="input-savings" sobject="CTPHARMA__Activity__c" sfield="Long_term_savings__c" value="" class="feedback"> 
+               <input type="hidden" id="input-assets" sobject="CTPHARMA__Activity__c" sfield="Other_income__c" value="" class="feedback"> 
+               <input type="hidden" id="input-monthly" sobject="CTPHARMA__Activity__c" sfield="Monthly_payment__c" value="" class="feedback"> 
+               <input type="hidden" id="input-overall" sobject="CTPHARMA__Activity__c" sfield="Credit__c" value="" class="feedback"> 
+               <input type="hidden" id="input-dependents" sobject="CTPHARMA__Activity__c" sfield="Dependents_with_Special_Needs__c" value="" class="feedback"> 
+               <input type="hidden" id="input-expenses" sobject="CTPHARMA__Activity__c" sfield="Other_expenses__c" value="" class="feedback"> 
+               <input type="hidden" id="input-homeown" sobject="CTPHARMA__Activity__c" sfield="Cost_of_housing__c" value="" class="feedback"> 
+               <!--                -->
+               <div class="footer"></div>
+            </div>
+            <!--wrapper-->
+         </div>
+         <!--main-->
+      </article>
+      <!--page-nav-->
+      <div class="page-nav">
+         <ul>
+            <li><a href="index.html">1</a></li>
+            <li><a href="index2.html">2</a></li>
+            <li><a href="index3.html">3</a></li>
+         </ul>
+      </div>
+      <!--page-nav-->
+   </body>
+</html>

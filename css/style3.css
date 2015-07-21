@@ -1,0 +1,58 @@
+.wrapper h2 {
+    color: #4d4d4d;
+font-size: 34px;
+line-height: 36px;
+margin: 28px 0 0 60px;
+}
+table {
+    margin: 45px 0 0 60px;
+width: 905px;
+}
+table tr {
+    display: block;
+    color: #000;
+    font-size: 26px;
+line-height: 26px;
+padding: 16px 0 16px 15px;
+}
+.title {
+    color: #008cb5;
+font-size: 28px;
+line-height: 28px;
+border-bottom: 2px solid #008cb5;
+padding: 0 0 12px 0;
+}
+table tr td {
+    display: inline-block;
+    width: 215px;
+}
+.third {
+    border-bottom: 2px solid #008cb5;
+}
+/*.second {
+    background: #f8865e;
+    color: #fff;
+}*/
+.btns {
+    float: right;
+margin: 88px 51px 0 0px
+}
+.btns a {
+    padding: 10px 53px;
+float: left;
+font-size: 28px;
+border-radius: 5px;
+}
+.btns a.start {
+    margin: 0 10px 0px 0;
+    border: 1px solid #008cb5;
+    color: #606060;
+}
+.cont {
+    background: #008cb5;
+    color: #fff;
+}
+.tb-line.active {
+    background: #f8865e;
+    color: #fff;
+}

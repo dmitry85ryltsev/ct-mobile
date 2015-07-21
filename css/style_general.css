@@ -1,0 +1,203 @@
+@charset "utf-8";
+/*================================== Table of Contents ===================================================================================== */
+/*  1. RESET
+/*  2. Global Structure
+/*	3. General tags
+/*  4. Content
+/*  5. Text styles
+/*	6. Mq
+/*=============================================================================================================================================*/
+
+
+
+/* ============================================================================================================================================ */
+/*      RESET     */                                                             								                 /*    RESET    */
+/* ============================================================================================================================================ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+del, dfn, em, font, img, ins, q, 
+small, strike, strong, sub, sup, 
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+footer, header, 
+article, aside, canvas, nav, section, 
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	font-size: 100%; 
+	vertical-align: baseline;
+	outline: 0;
+	padding: 0; 
+	margin: 0; 	
+	}
+		
+/* HTML5 display-role reset for older browsers */
+article, footer, header, menu, nav, section, aside, canvas { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none;}
+
+a:focus { outline:none; }
+
+blockquote { quotes: none; }
+blockquote:before, blockquote:after { 
+	content: ''; 
+	content: none; 
+	}
+
+table, caption, tbody, tfoot, thead, tr, th, td { 
+	border:none; 
+	border-collapse: collapse; 
+	border-spacing: 0;
+	vertical-align: middle;
+	margin: 0; 	
+	padding: 0;
+	}
+	
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* Disable selection/Copy of UIWebView */
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-text-size-adjust: none;
+}
+
+	
+
+/* ============================================================================================================================================ */
+/*      2.  Global   Structure     */                /**/                                                             /*    2.  Global   Structure   */
+/* ============================================================================================================================================ */
+html { 
+	height:768px; 
+	width:1024px;  
+	}
+body { 
+	height:768px; 
+	width:1024px;  
+	background:#000000;
+	font: 16px "HelveticaNeue Light", sans-serif;
+	color:#333333; /**/
+	}
+	.wrapper {
+		position:relative;
+        height:768px; 
+		width:1024px;
+		background:#ffffff;
+		overflow:hidden;
+		}
+		
+	/* ----------------------------------------------------------------------------  Header */
+		header {
+			background: #33a3c4;
+			height: 50px;
+			overflow: hidden;
+			padding-top:45px;
+			}
+			
+	/* ----------------------------------------------------------------------------  Content */
+		.Stage_base {
+			position:relative;
+			height:673px;
+			width:1024px;
+			background:#ffffff url(../images/bottom.png) no-repeat center bottom;
+			background-size:100% auto;
+			-webkit-box-sizing: border-box;
+			}
+ 
+
+/* ============================================================================================================================================ */
+/*      3.  General tags    */                                                                                         /*    3.  General tags   */
+/* ============================================================================================================================================ */
+a { text-decoration: none; }
+
+.fl_left 	{ float:left;   }
+.fl_right 	{ float:right;  }
+.center		{ margin-left:auto; margin-right:auto; }
+.block 		{ display:block; }
+.inner_wrapp{ overflow:hidden; }
+
+.center_box {
+	width: inherit;
+	height:inherit;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	}
+	
+.clear { 
+	height:0px; 
+	clear:both; 
+	display:block; 
+	}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	zoom:1;
+	}	
+
+
+.flex_box { display: -webkit-box; }
+
+	.flex_column-1 { width: 1px; -webkit-box-flex: 1; }
+	.flex_column-2 { width: 1px; -webkit-box-flex: 2; }
+	.flex_column-3 { width: 1px; -webkit-box-flex: 3; }
+	.flex_column-4 { width: 1px; -webkit-box-flex: 4; }
+
+
+
+
+
+/* ============================================================================================================================================= */
+/*      4.   Section  Content     */                               		                 	                   /*      4.   Section  Content     */
+/* ============================================================================================================================================= */
+
+
+
+/* ============================================================================================================================================ */
+/*     5.    Text styles     */                                                                                  /*     5.    Text styles     */   
+/* ============================================================================================================================================ */
+
+h1 {
+	position:relative;
+	height:50px;
+	background:#008cb5;
+    color: #fff;
+    font-weight: normal;
+    font-size: 36px;
+    padding: 0 0 0 60px;
+	}
+	h1:before {
+		content:'';
+		position: absolute;
+		top:-45px;
+		left:58px;
+		width:104px;
+		height:43px;
+		background:url(../images/header.png) no-repeat center 0;
+		background-size:100% auto;
+		}
+
+h2 {
+	font:28px "HelveticaNeue Bold", sans-serif;
+	line-height:30px;
+	font-weight:400;
+	color:#ffffff;
+	}
+ 
+h3 {
+	font:22px/32px "HelveticaNeue Bold", sans-serif;
+	font-weight:400;
+	color:#000000;
+	padding-bottom:15px;
+	}
+
+
+
+
+
+

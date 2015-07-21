@@ -1,0 +1,248 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" name="viewport"/>
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta http-equiv="content-type" content="charset=utf-8">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <title>{!POSITION_1}</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style1.css">
+      <script src="js/jquery-1.8.1.min.js"></script> 
+      <script src="js/jquery-ui.js"></script> 
+      <script src="js/jquery.ui.touch-punch.js"></script> 
+      <!--<script src="js/prefixfree.min.js"></script>--> 
+      <script src="js/scripts.js"></script> 
+
+   <!--<link type="text/css" rel="stylesheet" href="css/jquery.ratings.css" />
+    <script src="jquery-1.3.2.min.js"></script>-->
+    <script src="js/jquery.ratings.js"></script>
+    <script src="js/example.js"></script>
+
+
+      <script>
+         $(document).ready(function(){
+            $(".sex li.two").click(function(event) {
+               $(this).css({'background':'url(images/new1/female_active.png) 0 0 no-repeat','background-size':'contain'});
+               $(".sex li.one").css({'background':'url(images/new1/male_unactive.png) 0 0 no-repeat','background-size':'contain'});
+            });
+            $(".sex li.one").click(function(event) {
+               $(this).css({'background':'url(images/new1/male_active.png) 0 0 no-repeat','background-size':'contain'});
+               $(".sex li.two").css({'background':'url(images/new1/female_unactive.png) 0 0 no-repeat','background-size':'contain'});
+            });
+
+            $(".check").click(function(event) {
+               if ($(this).css('opacity')=='0') {
+                  $(this).css('opacity','1');
+               } else {
+                  $(this).css('opacity','0');
+               }
+            });
+            
+            $("li").click(function(event) {
+              $(this).addClass('baby-act');
+            });
+            
+            $(".rate li").click(function(event) {
+               $('.rate li').removeClass('active');
+               $('.buble').removeClass('active');
+               $(this).addClass('active');
+
+               var buble = $(this).data('buble');
+               $('.' + buble).addClass('active');
+            });
+
+            $('.buble, .children, .age, .tobacco').click(function(event) {
+               
+               $('.buble').removeClass('active');
+              
+            });
+
+            $('.cigar li').click(function(){
+               $('.cigar li').removeClass('active');
+               $(this).addClass('active');
+            });
+
+            $('.cigar1').click(function(){
+               $('.light').removeClass('active');
+               $(".light").animate({"left":"-10px"}, 800);
+               $(".paper").animate({"width":"747px"}, 800);
+               $(".light-off").removeClass(('active'), 0);
+            });
+            $('.cigar2').click(function(){
+               $('.light').addClass('active');
+               $(".light").animate({"left":"140px"}, 800);
+               $(".paper").animate({"width":"597px"}, 800);
+               $('.ash').animate({"opacity":"1"}, 800);
+               $(".light-off").removeClass(('active'), 0);
+
+            });
+            $('.cigar3').click(function(){
+               $('.light').addClass('active');
+               $(".light").animate({"left":"285px"}, 800);
+               $(".paper").animate({"width":"450px"}, 800);
+               $('.ash').animate({"opacity":"1"}, 800);
+               $(".light-off").removeClass(('active'), 0);
+            });
+            $('.cigar4').click(function(){
+               $('.light').addClass('active');
+               $(".light").animate({"left":"420px"}, 800);
+               $(".paper").animate({"width":"300px"}, 800);
+               $('.ash').animate({"opacity":"1"}, 800);
+               $(".light-off").removeClass(('active'), 0);
+            });
+            $('.cigar5').click(function(){
+               $('.light').addClass('active');
+               $(".light").animate({"left":"557px"}, 800);
+               $(".paper").animate({"width":"170px"}, 800);
+               $('.ash').animate({"opacity":"1"}, 800);
+               $(".light-off").removeClass(('active'), 0);
+            });
+            $('.cigar6').click(function(){
+               $('.light').addClass('active');
+               $(".light").animate({"left":"607px"}, 800);
+               $(".paper").animate({"width":"130px"}, 800);
+               setTimeout(function(){ 
+                  $(".light-off").addClass(('active'), 400);
+                  $('.ash').animate({"opacity":"0"}, 1000);
+               }, 600);
+
+            });
+
+         });
+
+      </script>
+      <script src="js/insurFlat_element.js"></script>
+
+   </head>
+   <body bgcolor="#ffffff">
+      <article id="slide">
+         <header id="header">
+            <h1>Personal Data</h1>
+         </header>
+         <div id="main">
+            <div class="wrapper">
+               <div class="age">
+                  <div class="year">
+                     <p>Your age:</p>
+                     <span>Yrs</span>
+                     <div class="carousel" data-step="1"> 
+                        <div class="slider_row row-1 active"> 
+                           <div id="furnish_flat" class="sliderwidget"></div> 
+                           <div class="slider-value"></div>
+                        </div><!-- slider_row --> 
+<input type="hidden" id="input-furnish" sobject="CTPHARMA__Activity__c" sfield="Finishing_and_engineering_equipment__c" value="" class="feedback"> 
+<input type="hidden" id="input-carcass" sobject="CTPHARMA__Activity__c" sfield="Structural_elements_of_the_building__c" value="" class="feedback"> 
+<input type="hidden" id="input-possessions" sobject="CTPHARMA__Activity__c" sfield="Property__c" value="" class="feedback"> 
+<input type="hidden" id="input-responsibility" sobject="CTPHARMA__Activity__c" sfield="Responsibility_to_the_neighbors__c" value="" class="feedback"> 
+</div><!-- carousel -->
+
+                  </div><!--year-->
+                  <div class="gender">
+                     <p>Gender:</p>
+                     <ul class="sex">
+                        <li class="one">1</li>
+                        <li class="two">2</li>
+                     </ul>
+                  </div><!--gender-->
+                  <div class="married">
+                     <p>Married:</p>
+                     <div class="check">check</div>
+                     <div class="checkbox">checkbox</div>
+                     
+                  </div><!--married-->
+               </div><!--age-->
+               <div class="children">
+                  <p>Children:</p>
+                  <div class="count"></div>
+                  <div id="example-2"></div>
+                  <span id="example-rating-2">0</span>
+               </div><!--children-->
+               <div class="health">
+                  <p>Rate your health:</p>
+                  <ul class="rate">
+                     <li class="rate1" data-buble="buble1"><p>Exceptionally <span>healthy</span></p></li>
+                     <li class="rate2" data-buble="buble2"><p>Really<br /><span>healthy</p></span></li>
+                     <li class="rate3" data-buble="buble3"><p>Pretty<br /><span>healthy</p></span></li>
+                     <li class="rate4" data-buble="buble4"><p>Healthy</p></li>
+                  </ul>
+                  <ul class="line">
+                     <li>1</li>
+                     <li>2</li>
+                     <li>3</li>
+                  </ul>
+                  <div class="info">
+                     <div class="buble buble1">
+                        <h2>You are <span>exceptionally healthy</span> if you meet <span>ALL</span> the following criteria:</h2>
+                        <ol>
+                           <li>Blood Pressure 135/85 or lower</li>
+                           <li>No history of treatment for hypertension</li>
+                           <li>Cholesterol 300 or lower</li>
+                           <li>Neither parent died from cardiovascular-related causes before age 65</li>
+                           <li>No history in the past 30 years of cancer (other than basal cell skin cancer)</li>
+                        </ol>
+                        <div class="triangle triangle1"></div>
+                     </div><!--buble-->
+                     <div class="buble buble2">
+                        <h2>You are <span>really healthy</span> if you meet <span>ALL</span> the following criteria:</h2>
+                        <ol>
+                           <li>Blood Pressure 135/90 or lower</li>
+                           <li>Cholesterol 300 or lower</li>
+                           <li>Neither parent died from cardiovascular-related causes before age 60</li>
+                           <li>No history in past 30 years of cancer (other than basal cell skin cancer)</li>
+                        </ol>
+                        <div class="triangle triangle2"></div>
+                     </div><!--buble-->
+                     <div class="buble buble3">
+                        <h2>You are <span>pretty healthy</span> if you meet <span>ALL</span> the following criteria:</h2>
+                        <ol>
+                           <li>Blood Pressure 140/95 or lower</li>
+                           <li>Cholesterol 300 or lower</li>
+                           <li>No more than one parent died from cardiovascular-related causes before age 60</li>
+                           <li>No history in past 30 years of cancer (other than basal cell skin cancer)</li>
+                        </ol>
+                        <div class="triangle triangle3"></div>
+                     </div><!--buble-->
+                     <div class="buble buble4">
+                        <h2>You are <span>healthy</span> if you meet at least <span>ONE</span> of the following criteria:</h2>
+                        <ol>
+                           <li>Blood Pressure exceeds 140/95</li>
+                           <li>Cholesterol higher than 300</li>
+                        </ol>
+                        <div class="triangle triangle4"></div>
+                     </div><!--buble-->
+                  </div><!--info-->
+
+               </div><!--health-->
+               <div class="tobacco">
+                  <p>Tobacco usage:</p>
+                  <div class="pack">
+                     <div class="ash">ash</div>
+                     <div class="paper">paper</div>
+                     <div class="light">light</div>
+                     <div class="light-off">light-off</div>
+                  </div>
+                  <ul class="cigar">
+                     <li class="cigar1 active"><p>Never/<br />not within<br />5 years</p></li>
+                     <li class="cigar2"><p>Not within<br />3 years</p></li>
+                     <li class="cigar3"><p>Not within<br />2 years</p></li>
+                     <li class="cigar4"><p>Not within<br />1 years</p></li>
+                     <li class="cigar5"><p>Less than<br />2 packs/day</p></li>
+                     <li class="cigar6"><p>2 or more<br />packs/day</p></li>
+                  </ul>
+               </div><!--tobacco-->
+               <div class="footer"></div>
+            </div><!--wrapper-->
+         </div>
+      </article>
+      <!--page-nav-->
+      <div class="page-nav">
+         <ul>
+            <li><a href="index.html">1</a></li>
+            <li><a href="index2.html">2</a></li>
+            <li><a href="index3.html">3</a></li>
+         </ul>
+      </div>
+      <!--page-nav-->
+   </body>
+</html>

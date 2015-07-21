@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html>
+   <head>
+      <meta content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width" name="viewport"/>
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta charset="utf-8">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <title>{!POSITION_1}</title>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style3.css">
+      <script src="js/jquery-1.8.1.min.js"></script> 
+      <script src="js/jquery-ui.js"></script> 
+      <script src="js/jquery.ui.touch-punch.js"></script> 
+      <!--<script src="js/prefixfree.min.js"></script>--> 
+      <script src="js/scripts.js"></script> 
+      <script type="text/javascript">
+         $(document).ready(function(){
+         
+           
+           var result =  localStorage.getItem("res");
+           $('#res').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res1");
+           $('#res1').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res3");
+           $('#res3').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res1_2");
+           $('#res1_2').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res1_3");
+           $('#res1_3').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res1_4");
+           $('#res1_4').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res2_2");
+           $('#res2_2').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res2_3");
+           $('#res2_3').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res2_4");
+           $('#res2_4').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res3_2");
+           $('#res3_2').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res3_3");
+           $('#res3_3').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+           var result =  localStorage.getItem("res3_4");
+           $('#res3_4').html(('<p style="display: inline">$ </p>' + result).replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
+         
+         
+           $('.tb-line').click(function(){
+             $('.tb-line').removeClass('active');
+             $(this).addClass('active');
+           });
+         });
+      </script>
+      <script src="js/insurLife_assets.js"></script> 
+   </head>
+   <body>
+      <article id="slide">
+         <header id="header">
+            <h1>Results</h1>
+         </header>
+         <div id="main">
+            <div class="wrapper">
+               <h2>Your coverage information</h2>
+               <table>
+                  <tr class="title">
+                     <td>Coverage</td>
+                     <td>Term insurance<br />10 years</td>
+                     <td>Term insurance<br />15 years</td>
+                     <td>Term insurance<br />20 years</td>
+                  </tr>
+                  <tr class="first tb-line">
+                     <td id="res1"></td>
+                     <td id="res1_2"></td>
+                     <td id="res1_3"></td>
+                     <td id="res1_4"></td>
+                  </tr>
+                  <tr class="second tb-line active">
+                     <td id="res"></td>
+                     <td id="res2_2"></td>
+                     <td id="res2_3"></td>
+                     <td id="res2_4"></td>
+                  </tr>
+                  <tr class="third tb-line">
+                     <td id="res3"></td>
+                     <td id="res3_2"></td>
+                     <td id="res3_3"></td>
+                     <td id="res3_4"></td>
+                  </tr>
+               </table>
+               <div class="btns">
+                  <a href="#slide1" class="start">Start over</a>
+                  <a href="policy.pdf" class="cont">Continue</a>
+               </div>
+               <div class="footer"></div>
+            </div>
+            <!--wrapper-->
+         </div>
+      </article>
+      <!--page-nav-->
+      <div class="page-nav">
+         <ul>
+            <li><a href="index.html">1</a></li>
+            <li><a href="index2.html">2</a></li>
+            <li><a href="index3.html">3</a></li>
+         </ul>
+      </div>
+      <!--page-nav-->
+   </body>
+</html>

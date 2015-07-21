@@ -1,0 +1,174 @@
+@charset "utf-8";
+	
+	
+/* -----------------------------------------------------------------------------  slide-2  */
+.slide-12 .Stage_base  {
+	padding:55px 0 0 0; 
+	}
+	.slide-12 .Stage_base img {
+		display:block;
+		margin:0 auto;
+		}
+	
+
+/* -----------------------------------------------------------------------------  slide-2  */
+.slide-2 .Stage_base  {
+	background-image:url(../images/slide-extra/bottom_logos.png);
+	padding:55px 0 0 63px; 
+	}
+
+	ul.dotted {
+		width:670px;
+		background: url(../images/slide-extra/ct_logo.png) no-repeat right center;
+		background-size:205px auto;
+		padding-right:205px;
+		margin:44px 0 0 0;
+		}
+		ul.dotted li {
+			position: relative;
+			font-size:20px;
+			line-height:25px;
+			padding-left:32px;
+			margin-bottom:31px;
+			}
+			ul.dotted li:before {
+				content:'';
+				position: absolute;
+				left:0;
+				top:9px;
+				width:6px;
+				height:6px;
+				background:#000000;
+				-webkit-border-radius: 50%;
+						border-radius: 50%;
+				}
+				
+			ul.dotted li:last-child { margin-bottom:0; }
+
+
+	ul.cloud {
+		padding:95px 0 0 60px;
+		}
+		ul.cloud li {
+			float:left;
+			position: relative;
+			width:200px;
+			height:71px;
+			background:url(../images/slide-extra/sf_logo.png) no-repeat 3px center;
+			background-size:auto 65px;
+			opacity:0;
+			-webkit-transition:opacity ease-out 0.4s;
+			padding-left:90px;
+			}
+			ul.cloud li:first-child { -webkit-transition-delay: 100ms; }
+			
+			ul.cloud li div {
+				width:200px;
+				height:71px;
+				border-left:2px solid #c2c2c2;
+				overflow:hidden;
+				display:table-cell;
+				vertical-align:middle;
+				}
+				ul.cloud li p {
+					font:18px/20px Helvetica;
+					font-weight:600;
+					color:#00a6e8;
+					text-transform:uppercase;
+					-webkit-transform: translate3d(-100%,0,0);
+					-webkit-transition:-webkit-transform ease-out 0.4s;
+					-webkit-transition-delay: 500ms; 
+					padding-left:11px;
+					}
+					ul.cloud li p span {
+						display:block;
+						font:12px/13px Helvetica;
+						font-weight:600;
+						color:#979391;
+						}
+					
+						ul.cloud li.active { opacity:1; }
+						ul.cloud li.active p { -webkit-transform: translate3d(0,0,0); }
+
+	h5 {
+		font-size:24px;
+		font-weight:400;
+		line-height:31px;
+		color:#0070c0;
+		}
+
+
+/* -----------------------------------------------------------------------------  slide-4  */
+.slide-4 .Stage_base  { padding:40px 0 0 0; }
+
+	.box_wrapper {
+		position:relative;
+		width:900px;
+		margin:0 auto;
+		}
+		.box_wrapper .box {
+			position: absolute;
+			top:0;
+			left:0;
+			width:920px;
+			height:180px;
+			webkit-transform-style: preserve-3d;
+			-webkit-perspective: 1000;
+			}
+			.box_wrapper .box:nth-child(2) { top:192px; }
+			.box_wrapper .box:nth-child(3) { top:384px; }
+
+			.box_wrapper .box .side {
+				position: absolute;
+				top:0;
+				left:10px;
+				width:900px;
+				height:180px;
+				-webkit-backface-visibility: hidden;
+				-webkit-transition: 1s;
+				padding:0 10px;
+				}
+				.box_wrapper .box .side.back { -webkit-transform: translate3d(0, 0, 0) rotateX(180deg); }
+				
+				.box_wrapper .box .side .inner  {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 894px;
+					height: 174px;
+					background:#ffffff;
+					-webkit-border-radius:30px;
+							border-radius:30px;
+					display: -webkit-box;
+					-webkit-box-align: center;
+					}
+					.box_wrapper .box .side.front .inner  {
+						border:3px solid #000000;
+						font:50px/50px Helvetica;
+						font-weight:600;
+						-webkit-box-pack: center;
+						}
+					.box_wrapper .box .side.back .inner  {
+						border:3px solid #007acd;
+						font:32px/32px Helvetica;
+						font-weight:600;
+						-webkit-box-pack:justify;
+						}
+						.box_wrapper .box .side.back .inner p { padding-left:21px; }
+						
+						.box_wrapper .box .side.back .inner ul {
+							width:562px;
+							display: -webkit-box;
+							-webkit-box-align: center; 
+							}
+							.box_wrapper .box .side.back .inner ul li { margin-left:23px; }
+							.box_wrapper .box .side.back .inner ul li:first-child { margin-left:0; }
+								
+								.box_wrapper .box .side.back .inner ul li img { display:block; }
+
+
+						.box.flipped .side.front { -webkit-transform: translate3d(0, 0, 0) rotateX(180deg); }
+						.box.flipped .side.back { -webkit-transform: translate3d(0, 0, 0) rotateX(360deg); }
+ 
+
+

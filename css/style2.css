@@ -1,0 +1,64 @@
+.ft-tub{
+	border: 1px solid #008cb5;
+    border-radius: 7px;
+    float: left;
+    padding: 14px 135px 14px 77px;
+    cursor: pointer;
+    margin: 0 17px 0 0;
+    font-size: 22px;
+    color: #606060;
+}
+.assets {
+    background: url(../images/new2/assets_off.png) 33px 10px no-repeat;
+    background-size: 23px;
+}
+.assets.active {
+    background: url(../images/new2/assets_on.png) 33px 10px no-repeat #008cb5;
+    background-size: 23px;
+}
+.liabil {
+    background: url(../images/new2/liabilities_off.png) 24px 10px no-repeat;
+    background-size: 44px;
+}
+.liabil.active {
+    background: url(../images/new2/liabilities_on.png) 24px 10px no-repeat #008cb5;
+    background-size: 44px;
+}
+.income {
+    background: url(../images/new2/income_off.png) 24px 10px no-repeat;
+    background-size: 44px;
+}
+.income.active {
+    background: url(../images/new2/income_on.png) 24px 10px no-repeat #008cb5;
+    background-size: 44px;
+}
+.ft-tubs-container {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    width: 640px;
+}
+.ft-tub.active {
+    position: relative;
+    border: 1px solid #008cb5;
+    color: #fff;
+}
+.ft-tub.active:after, .ft-tub.active:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.ft-tub.active:after {
+    border-color: rgba(0, 140, 181, 0);
+    border-top-color: #008cb5;
+    border-width: 20px;
+    margin-left: -20px;
+}
+.ft-tubs {
+    margin: 27px 0 0 60px;
+}
